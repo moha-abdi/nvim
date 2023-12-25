@@ -1,6 +1,7 @@
 local options = {
   ensure_installed = {
     "rust-analyzer",
+    "black",
     "mypy",
     "ruff",
     "pyright",
