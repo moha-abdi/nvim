@@ -3,7 +3,6 @@ local plugins = {
     "williamboman/mason.nvim",
     dots = {
       ensure_installed = {
-        "pyright"
       },
     }
   },
@@ -16,7 +15,14 @@ local plugins = {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-  }
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    ft = {"python"},
+    opts = function ()
+      return require("custom.configs.none-ls")
+    end
+  },
 }
 
 return plugins
