@@ -23,6 +23,7 @@ opt.tabstop = 2
 opt.softtabstop = 2
 
 opt.fillchars = { eob = " " }
+opt.fillchars:append { diff = "╱" }
 opt.ignorecase = true
 opt.smartcase = true
 opt.mouse = "a"

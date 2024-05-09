@@ -6,6 +6,8 @@ local options = {
     "ruff",
     "pyright",
     "lua-language-server",
+    "typescript-language-server",
+    "eslint-lsp",
   },
 
   PATH = "skip",

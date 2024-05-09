@@ -18,10 +18,30 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
-    ft = {"python"},
+    ft = {"python", "typescript", "javascript"},
     opts = function ()
       return require("custom.configs.none-ls")
     end
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+  },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+    config = function ()
+      require("custom.configs.diffview")
+    end
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false
   },
 }
 
