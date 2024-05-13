@@ -28,7 +28,7 @@ lspconfig.rust_analyzer.setup({
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"typescript", "javascript"},
+  filetypes = {"typescript", "javascript", "typescriptreact", "javascriptreact", "typescript.tsx", "javascript.jsx"},
   init_options = {
     preferences = {
       disableSuggestions = true,
