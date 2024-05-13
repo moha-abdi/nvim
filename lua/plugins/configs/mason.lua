@@ -8,6 +8,7 @@ local options = {
     "lua-language-server",
     "typescript-language-server",
     "eslint-lsp",
+    "tailwindcss-language-server",
   },
 
   PATH = "skip",
