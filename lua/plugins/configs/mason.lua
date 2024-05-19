@@ -8,7 +8,12 @@ local options = {
     "lua-language-server",
     "typescript-language-server",
     "eslint-lsp",
+    "eslint_d",
+    "prettier",
     "tailwindcss-language-server",
+    "bash-language-server",
+    "shellcheck",
+    "shfmt",
   },
 
   PATH = "skip",
