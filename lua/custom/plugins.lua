@@ -18,7 +18,11 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
-    ft = {"python", "typescript", "javascript"},
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+      "gbprod/none-ls-shellcheck.nvim",
+    },
+    ft = {"python", "typescript", "javascript", "sh", "bash", "zsh"},
     opts = function ()
       return require("custom.configs.none-ls")
     end

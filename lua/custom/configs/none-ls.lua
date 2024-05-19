@@ -5,9 +5,13 @@ local opts = {
   sources = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.shfmt,
+    require("none-ls.diagnostics.ruff"),
+    require("none-ls.diagnostics.eslint_d"),
+    require("none-ls.code_actions.eslint_d"),
+    require("none-ls-shellcheck.diagnostics"),
+    require("none-ls-shellcheck.code_actions"),
   },
   on_attach = function (client, bufnr)
     if client.supports_method("textDocument/formatting") then
