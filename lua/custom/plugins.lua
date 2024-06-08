@@ -22,7 +22,7 @@ local plugins = {
       "nvimtools/none-ls-extras.nvim",
       "gbprod/none-ls-shellcheck.nvim",
     },
-    ft = {"python", "typescript", "javascript", "sh", "bash", "zsh"},
+    ft = {"python", "typescript", "javascript", "sh", "bash", "zsh", "go"},
     opts = function ()
       return require("custom.configs.none-ls")
     end
@@ -46,6 +46,17 @@ local plugins = {
   {
     "wakatime/vim-wakatime",
     lazy = false
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function (_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function ()
+      vim.cmd('echo "Running build"')
+      vim.cmd([[silent! GoInstallDeps]])
+    end,
   },
 }
 

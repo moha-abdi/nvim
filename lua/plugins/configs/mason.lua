@@ -14,6 +14,10 @@ local options = {
     "bash-language-server",
     "shellcheck",
     "shfmt",
+    "gopls",
+    "gofumpt",
+    "goimports",
+    "golines",
   },
 
   PATH = "skip",
