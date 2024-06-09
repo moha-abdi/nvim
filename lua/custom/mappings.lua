@@ -6,5 +6,11 @@ M.general = {
   }
 }
 
+M.nvterm = {
+  t = {
+    ["<Esc>"] = {[[<C-\><C-n>]], "Nvterm Normal Mode"}
+  }
+}
+
 return M
 
