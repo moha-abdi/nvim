@@ -59,3 +59,15 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+lspconfig.prismals.setup {
+  cmd = {"prisma-language-server", "--stdio"},
+  filetypes = {"prisma"},
+  settings = {
+    prisma = {
+      prismaFmtBinPath = "", -- Optional: specify the path to `prisma-fmt` binary if needed
+    },
+  },
+  on_attach = on_attach,
+  capabilities = capabilities
+}

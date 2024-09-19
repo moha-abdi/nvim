@@ -22,7 +22,7 @@ local plugins = {
       "nvimtools/none-ls-extras.nvim",
       "gbprod/none-ls-shellcheck.nvim",
     },
-    ft = {"python", "typescript", "javascript", "sh", "bash", "zsh", "go"},
+    ft = {"python", "typescript", "javascript", "javascriptreact", "typescriptreact", "sh", "bash", "zsh", "go"},
     opts = function ()
       return require("custom.configs.none-ls")
     end
